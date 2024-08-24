@@ -1,0 +1,12 @@
+modules = ["php-8.2", "nodejs-20", "web", "php-8.1"]
+run = "php upload/index.php"
+
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+run = ["sh", "-c", "php upload/index.php"]
+
+[[ports]]
+localPort = 8000
+externalPort = 80
